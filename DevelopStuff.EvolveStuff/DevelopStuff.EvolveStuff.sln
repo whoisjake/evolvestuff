@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopStuff.EvolveStuff.Core", "DevelopStuff.EvolveStuff.Core\DevelopStuff.EvolveStuff.Core.csproj", "{E6118772-777C-4F96-B41F-2F213663B1EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopStuff.EvolveStuff.Examples", "DevelopStuff.EvolveStuff.Examples\DevelopStuff.EvolveStuff.Examples.csproj", "{669858E4-33B0-4C44-90E6-C19C84E7F15B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{E6118772-777C-4F96-B41F-2F213663B1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6118772-777C-4F96-B41F-2F213663B1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6118772-777C-4F96-B41F-2F213663B1EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669858E4-33B0-4C44-90E6-C19C84E7F15B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669858E4-33B0-4C44-90E6-C19C84E7F15B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669858E4-33B0-4C44-90E6-C19C84E7F15B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669858E4-33B0-4C44-90E6-C19C84E7F15B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

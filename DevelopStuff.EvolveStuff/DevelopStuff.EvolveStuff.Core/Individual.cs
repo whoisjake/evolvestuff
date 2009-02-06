@@ -13,10 +13,29 @@ namespace DevelopStuff.EvolveStuff.Core
 
         #region Fields
 
-        private Guid _id;
-        private double _fitness;
-        private Guid _generationID;
-        private DateTime _dateCreated;
+        /// <summary>
+        /// Gets or sets the ID.
+        /// </summary>
+        /// <value></value>
+        public Guid ID { get; set; }
+
+        /// <summary>
+        /// Gets or sets the fitness.
+        /// </summary>
+        /// <value></value>
+        public double Fitness { get; set; }
+
+        /// <summary>
+        /// Gets or sets the generation ID.
+        /// </summary>
+        /// <value></value>
+        public Guid GenerationID { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date created.
+        /// </summary>
+        /// <value></value>
+        public DateTime DateCreated { get; set; }
 
         #endregion
 
@@ -27,8 +46,8 @@ namespace DevelopStuff.EvolveStuff.Core
         /// </summary>
         public Individual()
         {
-            this._id = Guid.NewGuid();
-            this._dateCreated = DateTime.Now;
+            this.ID = Guid.NewGuid();
+            this.DateCreated = DateTime.Now;
         }
 
         /// <summary>
@@ -38,76 +57,8 @@ namespace DevelopStuff.EvolveStuff.Core
         /// <param name="dateCreated">The date the Individual was created.</param>
         public Individual(Guid id, DateTime dateCreated)
         {
-            this._id = id;
-            this._dateCreated = dateCreated;
-        }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the date created.
-        /// </summary>
-        /// <value></value>
-        public DateTime DateCreated
-        {
-            get
-            {
-                return this._dateCreated;
-            }
-            set
-            {
-                this._dateCreated = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the generation ID.
-        /// </summary>
-        /// <value></value>
-        public Guid GenerationID
-        {
-            get
-            {
-                return this._generationID;
-            }
-            set
-            {
-                this._generationID = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the fitness.
-        /// </summary>
-        /// <value></value>
-        public double Fitness
-        {
-            get
-            {
-                return this._fitness;
-            }
-            set
-            {
-                this._fitness = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the ID.
-        /// </summary>
-        /// <value></value>
-        public Guid ID
-        {
-            get 
-            { 
-                return this._id; 
-            }
-            set
-            { 
-                this._id = value; 
-            }
+            this.ID = id;
+            this.DateCreated = dateCreated;
         }
 
         #endregion

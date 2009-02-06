@@ -22,14 +22,23 @@ namespace DevelopStuff.EvolveStuff.Core
         #endregion
 
         #region Fields
-
-        private SimpleEnvironment<TIndividual> _environment;
+        /// <summary>
+        /// Gets or sets the <see cref="SimpleEnvironment"/>.
+        /// </summary>
+        public SimpleEnvironment<TIndividual> Environment { get; set; }
         private IList<Generation<TIndividual>> _generations;
 
         protected delegate void GenerationDelegate();
-        private GenerationDelegate _generationDelegate;
 
-        private StrategyConfiguration _configuration;
+        /// <summary>
+        /// Gets or sets the <see cref="GeneratorDelegate"/>.
+        /// </summary>
+        protected GenerationDelegate ProcessDelegate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the <see cref="StrategyConfiguration"/>.
+        /// </summary>
+        public StrategyConfiguration StrategyConfiguration { get; set; }
 
         #endregion
 
@@ -54,51 +63,6 @@ namespace DevelopStuff.EvolveStuff.Core
         #endregion
 
         #region Properties
-
-        /// <summary>
-        /// Gets or sets the <see cref="StrategyConfiguration"/>.
-        /// </summary>
-        public StrategyConfiguration StrategyConfiguration
-        {
-            get
-            {
-                return this._configuration;
-            }
-            set
-            {
-                this._configuration = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the <see cref="GeneratorDelegate"/>.
-        /// </summary>
-        protected GenerationDelegate ProcessDelegate
-        {
-            get
-            {
-                return this._generationDelegate;
-            }
-            set
-            {
-                this._generationDelegate = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the <see cref="SimpleEnvironment"/>.
-        /// </summary>
-        public SimpleEnvironment<TIndividual> Environment
-        {
-            get
-            {
-                return this._environment;
-            }
-            set
-            {
-                this._environment = value;
-            }
-        }
 
         /// <summary>
         /// Gets a list of <see cref="Generation<TIndividual>"/>

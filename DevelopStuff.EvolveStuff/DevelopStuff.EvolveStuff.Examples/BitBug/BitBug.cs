@@ -7,7 +7,12 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
 {
     public class BitBug : Individual
     {
-        private int[] _values;
+        /// <summary>
+        /// Gets or sets the values.
+        /// </summary>
+        /// <value></value>
+        public int[] Values { get; set; }
+
         private static Random _random = new Random();
 
         /// <summary>
@@ -16,7 +21,7 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
         public BitBug()
             : base()
         {
-            _values = new int[16];
+            this.Values = new int[16];
             this.RandomizeValues();
         }
 
@@ -29,17 +34,7 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
         public BitBug(Guid id, int[] values, DateTime dateCreated)
             : base(id, dateCreated)
         {
-            _values = values;
-        }
-
-        /// <summary>
-        /// Gets or sets the values.
-        /// </summary>
-        /// <value></value>
-        public int[] Values
-        {
-            get { return _values; }
-            set { _values = value; }
+            this.Values = values;
         }
 
         /// <summary>

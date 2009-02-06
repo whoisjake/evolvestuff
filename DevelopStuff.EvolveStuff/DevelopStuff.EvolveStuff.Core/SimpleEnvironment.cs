@@ -17,7 +17,16 @@ namespace DevelopStuff.EvolveStuff.Core
         private const int MAX_POPULATION_SIZE = 100;
         private FitnessFunction<TIndividual>  _fitnessFunction;
         private ParentSelector<TIndividual> _parentSelector;
-        private StrategyConfiguration _configuration;
+        
+        /// <summary>
+        /// Gets or sets the <see cref="StrategyConfiguration"/>.
+        /// </summary>
+        protected StrategyConfiguration StrategyConfiguration { get; set; }
+
+        /// <summary>
+        /// Gets or sets the <see cref="ParentSelector<TIndividual>"/>.
+        /// </summary>
+        public ParentSelector<TIndividual> ParentSelector { get; set; }
 
         #endregion
 
@@ -33,21 +42,6 @@ namespace DevelopStuff.EvolveStuff.Core
         #endregion
 
         #region Properties
-
-        /// <summary>
-        /// Gets or sets the <see cref="StrategyConfiguration"/>.
-        /// </summary>
-        protected StrategyConfiguration StrategyConfiguration
-        {
-            get
-            {
-                return this._configuration;
-            }
-            set
-            {
-                this._configuration = value;
-            }
-        }
 
         /// <summary>
         /// Gets the maxium size of a population.
@@ -72,21 +66,6 @@ namespace DevelopStuff.EvolveStuff.Core
                     this._individuals = new List<TIndividual>();
                 }
                 return this._individuals;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the <see cref="ParentSelector<TIndividual>"/>.
-        /// </summary>
-        public ParentSelector<TIndividual> ParentSelector
-        {
-            get
-            {
-                return this._parentSelector;
-            }
-            set
-            {
-                this._parentSelector = value;
             }
         }
 

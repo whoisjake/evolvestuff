@@ -28,13 +28,6 @@ namespace DevelopStuff.EvolveStuff.Core
         public SimpleEnvironment<TIndividual> Environment { get; set; }
         private IList<Generation<TIndividual>> _generations;
 
-        protected delegate void GenerationDelegate();
-
-        /// <summary>
-        /// Gets or sets the <see cref="GeneratorDelegate"/>.
-        /// </summary>
-        protected GenerationDelegate ProcessDelegate { get; set; }
-
         /// <summary>
         /// Gets or sets the <see cref="StrategyConfiguration"/>.
         /// </summary>
@@ -90,28 +83,6 @@ namespace DevelopStuff.EvolveStuff.Core
         #endregion
 
         #region Methods
-
-        /// <summary>
-        /// Begins the evolution.
-        /// </summary>
-        /// <param name="callback"></param>
-        /// <returns></returns>
-        public IAsyncResult BeginEvolution(AsyncCallback callback)
-        {
-            this.ProcessDelegate = new GenerationDelegate(this.Evolve);
-            return this.ProcessDelegate.BeginInvoke(callback, null);
-        }
-
-        /// <summary>
-        /// Ends the evolution.
-        /// </summary>
-        /// <param name="ar"></param>
-        /// <returns></returns>
-        public Generation<TIndividual> EndEvolution(IAsyncResult ar)
-        {
-            this.ProcessDelegate.EndInvoke(ar);
-            return (this.Generations.Count > 0) ? this.Generations[this.Generations.Count - 1] : null;
-        }
 
         /// <summary>
         /// Determines if the strategy should continue

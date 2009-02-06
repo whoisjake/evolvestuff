@@ -14,9 +14,11 @@ namespace DevelopStuff.EvolveStuff.Core
         #region Fields
 
         private IList<TIndividual> _individuals;
-        private const int MAX_POPULATION_SIZE = 100;
-        private FitnessFunction<TIndividual>  _fitnessFunction;
-        private ParentSelector<TIndividual> _parentSelector;
+        
+        /// <summary>
+        /// Gets or sets the <see cref="FitnessFunction<TIndividual>"/>.
+        /// </summary>
+        public FitnessFunction<TIndividual> FitnessFunction { get; set; }
         
         /// <summary>
         /// Gets or sets the <see cref="StrategyConfiguration"/>.
@@ -66,21 +68,6 @@ namespace DevelopStuff.EvolveStuff.Core
                     this._individuals = new List<TIndividual>();
                 }
                 return this._individuals;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the <see cref="FitnessFunction<TIndividual>"/>.
-        /// </summary>
-        public FitnessFunction<TIndividual> FitnessFunction
-        {
-            get
-            {
-                return this._fitnessFunction;
-            }
-            set
-            {
-                this._fitnessFunction = value;
             }
         }
 

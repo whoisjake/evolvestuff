@@ -1,6 +1,6 @@
 DevelopStuff.EvolveStuff/DevelopStuff.EvolveStuff.suo
-*/*/bin/[^.]*
-*/*/obj/[^.]*
+*/*/bin/*
+*/*/obj/*
 */*/*.pidb
 DevelopStuff.EvolveStuff/DevelopStuff.EvolveStuff.userprefs
 DevelopStuff.EvolveStuff/DevelopStuff.EvolveStuff.usertasks

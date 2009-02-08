@@ -5,7 +5,7 @@ using DevelopStuff.EvolveStuff.Core;
 
 namespace DevelopStuff.EvolveStuff.Examples.BitBug
 {
-    public class BitBug : Individual
+    public class Bug : Individual
     {
         /// <summary>
         /// Gets or sets the values.
@@ -18,7 +18,7 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
         /// <summary>
         /// Initializes a new instance of the <see cref="T:BitBug"/> class.
         /// </summary>
-        public BitBug()
+        public Bug()
             : base()
         {
             this.Values = new int[16];
@@ -31,7 +31,7 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
         /// <param name="id">The id.</param>
         /// <param name="values">The values.</param>
         /// <param name="dateCreated">The date created.</param>
-        public BitBug(Guid id, int[] values, DateTime dateCreated)
+        public Bug(Guid id, int[] values, DateTime dateCreated)
             : base(id, dateCreated)
         {
             this.Values = values;
@@ -62,10 +62,10 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
             for (int i = 0; i < 8; i++)
             {
                 childValues[i] = this.Values[i];
-                childValues[15 - i] = ((BitBug)selectedParent).Values[15 - i];
+                childValues[15 - i] = ((Bug)selectedParent).Values[15 - i];
             }
 
-            BitBug child = new BitBug();
+            Bug child = new Bug();
             child.Values = childValues;
 
             if (_random.Next(0, 100) <= (mutationRate * 100))

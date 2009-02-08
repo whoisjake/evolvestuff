@@ -5,7 +5,7 @@ using DevelopStuff.EvolveStuff.Core;
 
 namespace DevelopStuff.EvolveStuff.Examples.BitBug
 {
-    public class BitBugFunction : FitnessFunction<BitBug>
+    public class BitBugFitnessFunction : FitnessFunction<Bug>
     {
         #region IFitnessFunction Members
 
@@ -15,9 +15,9 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
         /// <param name="environment"></param>
         /// <param name="individual"></param>
         /// <returns></returns>
-        public override double CalculateFitness(SimpleEnvironment<BitBug> environment, BitBug individual)
+        public override double CalculateFitness(SimpleEnvironment<Bug> environment, Bug individual)
         {
-            BitBug arrayIndividual = individual;
+            Bug arrayIndividual = individual;
 
             double total = 0;
 
@@ -30,6 +30,5 @@ namespace DevelopStuff.EvolveStuff.Examples.BitBug
         }
 
         #endregion
-
     }
 }

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopStuff.EvolveStuff.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopStuff.EvolveStuff.Examples", "DevelopStuff.EvolveStuff.Examples\DevelopStuff.EvolveStuff.Examples.csproj", "{669858E4-33B0-4C44-90E6-C19C84E7F15B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopStuff.EvolveStuff.Examples.Runner", "DevelopStuff.EvolveStuff.Examples.Runner\DevelopStuff.EvolveStuff.Examples.Runner.csproj", "{5191EF67-0711-4400-A549-8CC211C203B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{669858E4-33B0-4C44-90E6-C19C84E7F15B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669858E4-33B0-4C44-90E6-C19C84E7F15B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669858E4-33B0-4C44-90E6-C19C84E7F15B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5191EF67-0711-4400-A549-8CC211C203B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5191EF67-0711-4400-A549-8CC211C203B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5191EF67-0711-4400-A549-8CC211C203B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5191EF67-0711-4400-A549-8CC211C203B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

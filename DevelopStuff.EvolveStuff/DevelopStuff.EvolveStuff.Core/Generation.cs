@@ -115,16 +115,26 @@ namespace DevelopStuff.EvolveStuff.Core
         #endregion
 
         #region Methods
-
-        /// <summary>
-        /// Sorts the individuals.
-        /// </summary>
-        private void SortIndividuals()
-        {
-            List<TIndividual> sorted = new List<TIndividual>(this.Individuals);
-            sorted.Sort(new GenericFitnessComparer<TIndividual>());
-            this.Individuals = sorted;
-        }
+		
+		/// <summary>
+		/// Finds the best fit <see cref="TIndividual"/>.
+		/// </summary>
+		public TIndividual BestFit()
+		{
+			TIndividual bestSoFar = null;
+			double bestFit = double.MinValue;
+			
+			foreach(TIndividual indv in this.Individuals)
+			{
+				if (indv.Fitness > bestFit)
+				{
+					bestSoFar = indv;
+					bestFit = indv.Fitness;
+				}
+			}
+			
+			return bestSoFar;
+		}
 
         /// <summary>
         /// Takes each individual and performs an initial setup.

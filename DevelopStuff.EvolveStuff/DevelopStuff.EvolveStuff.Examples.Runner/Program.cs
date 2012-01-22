@@ -12,9 +12,19 @@ namespace DevelopStuff.EvolveStuff.Examples.Runner
         static void Main(string[] args)
         {
             UniversalStrategy<Bug, BitBugFitnessFunction> evolver = new UniversalStrategy<Bug, BitBugFitnessFunction>();
-            evolver.Evolve();
+            
+			evolver.GenerationEvolved += delegate(object sender, GenerationEventArgs<Bug> e) {
+				Generation<Bug> generation = e.Generation;
+				Console.WriteLine("Size: " + generation.Count);
+				Bug best = generation.BestFit();
+				double averageFitness = generation.Average(bug => bug.Fitness);
+				Console.WriteLine("Generation Complete: " + generation.ID.ToString() + " : Best " + best.Fitness.ToString()  + " Avg: " + averageFitness.ToString());	
+			};
+			
+			evolver.Evolve();
+			
             Generation<Bug> bugs = evolver.Generations.Last<Generation<Bug>>();
-
+			
             foreach (Bug b in bugs)
             {
                 StringBuilder sb = new StringBuilder();
